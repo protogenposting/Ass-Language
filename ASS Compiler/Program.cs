@@ -2,7 +2,7 @@
 
 string[] files = Directory.GetFiles(location);
 
-string[] assFiles = {};
+LinkedList<string> assFiles = new LinkedList<string>();
 
 foreach(var file in files)
 {
@@ -12,13 +12,24 @@ foreach(var file in files)
     {
         string endFile = Path.GetFileName(file);
 
-        assFiles.Append(endFile);
+        assFiles.AddLast(endFile);
         
         Console.WriteLine(endFile);
     }
 }
 
 string selectedFile = null;
+
+if(assFiles.Count==1)
+{
+    selectedFile = assFiles.First.Value;
+}
+
+if(!assFiles.Any())
+{
+    Console.WriteLine("No .ASS files found in this directory please add some :3");
+    System.Environment.Exit(1);
+}
 
 while(selectedFile==null)
 {
@@ -28,9 +39,7 @@ while(selectedFile==null)
 
     foreach(var file in assFiles)
     {
-        Console.WriteLine(input);
-        Console.WriteLine(file);
-        if(string.Compare(file,input)==1)
+        if(string.Compare(file,input)==0)
         {
             selectedFile=file;
             break;
