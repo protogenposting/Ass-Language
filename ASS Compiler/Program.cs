@@ -28,6 +28,7 @@ if(assFiles.Count==1)
 if(!assFiles.Any())
 {
     Console.WriteLine("No .ASS files found in this directory please add some :3");
+    Thread.Sleep(5000);
     System.Environment.Exit(1);
 }
 
@@ -48,3 +49,4 @@ while(selectedFile==null)
 }
 
 Console.WriteLine("running " + selectedFile + "...");
+
