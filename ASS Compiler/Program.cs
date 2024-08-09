@@ -107,7 +107,18 @@
 
                 if (currentKeyword != null)
                 {
-                    Console.WriteLine(currentKeyword.name);
+                    if(currentKeyword.name == "var")
+                    {
+                        searchStart += currentKeyword.name.Length+1;
+
+                        var nextSpace = line.IndexOf(' ',searchStart+1);
+
+                        var variableName = line.Substring(searchStart,nextSpace-searchStart);
+
+                        //Keywords.keywordVar()
+
+                        Console.WriteLine(variableName);
+                    }
                 }
             }
         }
