@@ -77,33 +77,44 @@
             LinkedList<Data> variables = new LinkedList<Data>();
             foreach (var line in programLines)
             {
+                var newLine = line;
+
+                var endLocation = newLine.Length+1;
+
+                var slashLocation = newLine.IndexOf('/');
+
+                if(slashLocation!=-1&&newLine.Substring(slashLocation+1,1)=="/")
+                {
+                    newLine=newLine.Remove(slashLocation);
+                }
+
                 var searchStart = 0;
 
-                if (line.Length <= 0)
+                if (newLine.Length <= 0)
                 {
                     continue;
                 }
 
-                var currentCharacter = line.Substring(searchStart, 1);
+                var currentCharacter = newLine.Substring(searchStart, 1);
 
                 while (currentCharacter == " ")
                 {
                     searchStart++;
 
-                    if (line.Length <= searchStart)
+                    if (newLine.Length <= searchStart)
                     {
                         continue;
                     }
 
-                    currentCharacter = line.Substring(searchStart, 1);
+                    currentCharacter = newLine.Substring(searchStart, 1);
                 }
 
-                if (line.Length <= searchStart)
+                if (newLine.Length <= searchStart)
                 {
                     continue;
                 }
 
-                Keyword currentKeyword = Keywords.FindKeyword(line);
+                Keyword currentKeyword = Keywords.FindKeyword(newLine);
 
                 if (currentKeyword != null)
                 {
@@ -111,15 +122,25 @@
                     {
                         searchStart += currentKeyword.name.Length+1;
 
-                        var nextSpace = line.IndexOf(' ',searchStart+1);
+                        var nextSpace = newLine.IndexOf(' ',searchStart+1);
 
-                        var variableName = line.Substring(searchStart,nextSpace-searchStart);
+                        var variableName = newLine.Substring(searchStart,nextSpace-searchStart);
 
-                        //Keywords.keywordVar()
+                        searchStart = nextSpace;
 
-                        Console.WriteLine(variableName);
+                        var equals = newLine.IndexOf('=',searchStart+1);
+
+                        var value = newLine.Substring(equals+1,newLine.Length - equals - 1);
+
+                        Keywords.keywordVar(variableName,value,variables);                        
                     }
                 }
+            }
+            foreach (var variable in variables)
+            {
+                Console.WriteLine(variable.name);
+
+                Console.WriteLine(variable.value);
             }
         }
         static void Main()

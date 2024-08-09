@@ -33,6 +33,11 @@ namespace AssCompiler
         }
         public static void keywordVar(string variableName, string value, LinkedList<Data> variables)
         {
+            if(variableName.Length==1)
+            {
+                Console.WriteLine("No fuck you");
+                System.Environment.Exit(1);
+            }
             if (double.TryParse(value, out double n))
             {
                 double variableValue = double.Parse(value);

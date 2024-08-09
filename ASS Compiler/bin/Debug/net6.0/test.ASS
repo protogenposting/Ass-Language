@@ -42,4 +42,4 @@ if(int == 0)
     print("it is zero now")
 }
 
-var i = 0 // ends the program
+var i = 0 //i love how this crashes your thingy :3
