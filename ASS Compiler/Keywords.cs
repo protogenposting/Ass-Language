@@ -17,9 +17,16 @@ namespace AssCompiler
         {
             foreach(var i in keywords)
             {
-                if(i.name==line.Substring(0,i.name.Length))
+                try
                 {
-                    return i;
+                    if(i.name==line.Substring(0,i.name.Length))
+                    {
+                        return i;
+                    }
+                }
+                catch(Exception e)
+                {
+
                 }
             }
             return null;

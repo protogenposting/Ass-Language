@@ -79,16 +79,36 @@
             {
                 var searchStart = 0;
 
+                if (line.Length <= 0)
+                {
+                    continue;
+                }
+
                 var currentCharacter = line.Substring(searchStart, 1);
 
                 while (currentCharacter == " ")
                 {
                     searchStart++;
 
+                    if (line.Length <= searchStart)
+                    {
+                        continue;
+                    }
+
                     currentCharacter = line.Substring(searchStart, 1);
                 }
 
+                if (line.Length <= searchStart)
+                {
+                    continue;
+                }
+
                 Keyword currentKeyword = Keywords.FindKeyword(line);
+
+                if (currentKeyword != null)
+                {
+                    Console.WriteLine(currentKeyword.name);
+                }
             }
         }
         static void Main()
@@ -105,6 +125,8 @@
 
                 line = fileReader.ReadLine();
             }
+
+            runAssProgram(fileLines);
         }
     }
 }
