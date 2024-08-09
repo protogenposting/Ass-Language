@@ -1,0 +1,45 @@
+var int = 2
+
+// comment test
+
+int += 3
+
+int -= 1
+
+int /= 3
+
+int *= 3
+
+// another comment uwu
+
+var int2 = 7
+
+int = int2 - 3
+
+print(int)
+
+print("int")
+
+print("balls")
+
+if(int == 0)
+{
+    print("nuh uh")
+}
+if(int != 0)
+{
+    print("it is infact not zero")
+}
+
+int = 0
+
+if(int != 0)
+{
+    print("it is infact not zero")
+}
+if(int == 0)
+{
+    print("it is zero now")
+}
+
+var i = 0 // ends the program
