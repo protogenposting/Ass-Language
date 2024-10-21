@@ -78,6 +78,11 @@
             //tokenize them strings
             foreach (var line in programLines)
             {
+                string newLine = line;
+
+                //remove all the tabs lol
+                line.Replace("\t","");
+                
                 int slashLocation = line.IndexOf("//");
                 if(slashLocation == 0)
                 {
