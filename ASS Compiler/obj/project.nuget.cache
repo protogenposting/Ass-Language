@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GrMvmAp/DDn0BVAb9YSB6HVSnRdskx+eowG1GbSa9ShNy+EAoOsIUL+md9LxLS3so+4u67nnTihu1D7EAHCemw==",
+  "dgSpecHash": "S/32j5P08rrd+bcgbBf1PvXkypf+Wwnzxwi5CeHtirpAVIWblvhoxpBGO0qcc4R0t8UiBGsGpDCRhUl91s36XQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\firef\\Desktop\\Ass-Compiler\\ASS Compiler\\ASS Compiler.csproj",
+  "projectFilePath": "/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/ASS Compiler.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

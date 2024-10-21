@@ -1,0 +1,16 @@
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/bin/Debug/net8.0/ASS Compiler
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/bin/Debug/net8.0/ASS Compiler.deps.json
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/bin/Debug/net8.0/ASS Compiler.runtimeconfig.json
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/bin/Debug/net8.0/ASS Compiler.dll
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/bin/Debug/net8.0/ASS Compiler.pdb
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/obj/Debug/net8.0/ASS Compiler.GeneratedMSBuildEditorConfig.editorconfig
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/obj/Debug/net8.0/ASS Compiler.AssemblyInfoInputs.cache
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/obj/Debug/net8.0/ASS Compiler.AssemblyInfo.cs
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/obj/Debug/net8.0/ASS Compiler.csproj.CoreCompileInputs.cache
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/obj/Debug/net8.0/ASS Compiler.sourcelink.json
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/obj/Debug/net8.0/ASS Compiler.dll
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/obj/Debug/net8.0/refint/ASS Compiler.dll
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/obj/Debug/net8.0/ASS Compiler.pdb
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/obj/Debug/net8.0/ASS Compiler.genruntimeconfig.cache
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/obj/Debug/net8.0/ref/ASS Compiler.dll
+/home/protogenposting/Documents/GitHub/Ass-Language/ASS Compiler/bin/Debug/net8.0/testingprogram.ASS

@@ -5,7 +5,7 @@
         static string getFile()
         {
             //this prevents vs code from giving a warning on certain thingamabobs
-#pragma warning disable
+            #pragma warning disable
 
             //get the exe's location
             string location = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
@@ -75,72 +75,15 @@
         static void runAssProgram(LinkedList<string> programLines)
         {
             LinkedList<Data> variables = new LinkedList<Data>();
+            //tokenize them strings
             foreach (var line in programLines)
             {
-                var newLine = line;
-
-                var endLocation = newLine.Length+1;
-
-                var slashLocation = newLine.IndexOf('/');
-
-                if(slashLocation!=-1&&newLine.Substring(slashLocation+1,1)=="/")
+                int slashLocation = line.IndexOf("//");
+                if(slashLocation == 0)
                 {
-                    newLine=newLine.Remove(slashLocation);
-                }
-
-                var searchStart = 0;
-
-                if (newLine.Length <= 0)
-                {
+                    Console.WriteLine(line);
                     continue;
                 }
-
-                var currentCharacter = newLine.Substring(searchStart, 1);
-
-                while (currentCharacter == " ")
-                {
-                    searchStart++;
-
-                    if (newLine.Length <= searchStart)
-                    {
-                        continue;
-                    }
-
-                    currentCharacter = newLine.Substring(searchStart, 1);
-                }
-
-                if (newLine.Length <= searchStart)
-                {
-                    continue;
-                }
-
-                Keyword currentKeyword = Keywords.FindKeyword(newLine);
-
-                if (currentKeyword != null)
-                {
-                    if(currentKeyword.name == "var")
-                    {
-                        searchStart += currentKeyword.name.Length+1;
-
-                        var nextSpace = newLine.IndexOf(' ',searchStart+1);
-
-                        var variableName = newLine.Substring(searchStart,nextSpace-searchStart);
-
-                        searchStart = nextSpace;
-
-                        var equals = newLine.IndexOf('=',searchStart+1);
-
-                        var value = newLine.Substring(equals+1,newLine.Length - equals - 1);
-
-                        Keywords.keywordVar(variableName,value,variables);                        
-                    }
-                }
-            }
-            foreach (var variable in variables)
-            {
-                Console.WriteLine(variable.name);
-
-                Console.WriteLine(variable.value);
             }
         }
         static void Main()

@@ -1,11 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
+  <ItemGroup>
+    <None Update="testingprogram.ASS" CopyToOutputDirectory="Always" />
+    <None Update="testingprogram.ASS" CopyToPublishDirectory="Always" />
+  </ItemGroup>
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>ASS_Compiler</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
 </Project>
